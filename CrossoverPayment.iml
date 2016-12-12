@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="com.sparkjava:spark-core:2.3" level="project" />
     <orderEntry type="library" name="com.sparkjava:spark-template-mustache:2.3" level="project" />
+    <orderEntry type="library" name="org.jodd:jodd-json:3.6.7" level="project" />
   </component>
 </module>

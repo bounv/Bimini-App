@@ -1,15 +1,26 @@
 package com.company;
 
-import spark.ModelAndView;
 import spark.Spark;
-import spark.template.mustache.MustacheTemplateEngine;
 
-import java.util.HashMap;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static Products products;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        ArrayList<Products> products = new ArrayList<>();
+        File productData = new File("products.txt");
+        Scanner scanner = new Scanner(productData);
+        while(scanner.hasNext()) {
+            String read = scanner.nextLine();
+            String [] p = read.split(",");
+            Products prod = new Products(Integer.parseInt(p[0]), p[1], p[2], Double.parseDouble(p[3]), p[4]);
+            products.add(prod);
+        }
 
         Spark.init();
 
@@ -33,6 +44,7 @@ public class Main {
 
 
 
+
                     return "hello world";
 
                 })
@@ -45,6 +57,8 @@ public class Main {
                 ((request, response) -> {
                     //will be linked for all pages, will show the current attributes of the session
                    //will have the remove, add, and change
+
+
 
                     return "hello world";
 
