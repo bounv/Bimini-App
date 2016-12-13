@@ -20,7 +20,7 @@ class App extends Component {
             <div className="image-container">
             <img src={pic} className="land-photo" alt="image" />
               <div className="opaque-box">
-              <span className="landing-page-desc">Bimini is your premier source for artisinal waters imbued with all the finest minerals on earth. Browse our premium selection of products to find the perfect water for your needs and price range.</span>
+              <span className="landing-page-desc">Bimini is your premiere source for artisinal waters imbued with all the finest minerals on earth. Browse our premium selection of products to find the perfect water for your needs and price range.</span>
               </div>
             </div>
           </div>
