@@ -1,0 +1,101 @@
+.App {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-titles {
+  display: flex;
+  position: absolute;
+  margin-left: 8rem;
+  justify-content: space-around;
+  padding: 0;
+  font-size: 18px;
+  font-family:"Rosario", sans-serif;
+  color: #F2F2F2;
+}
+
+.bimini-name {
+  position: absolute;
+  font-family: 'Syncopate', sans-serif;
+  color: #56CCF2;
+  -webkit-text-stroke: 1px #2F80ED;
+  font-size: 34px;
+  margin-top: .5rem;
+}
+
+.list-title {
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.Nav-photo {
+  display: flex;
+  flex-direction: column;
+  height: 126px;
+  width: 100%;
+  opacity: .7;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.mid-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.slogan-main {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  background-color: #007BCD;
+  color: #F2F2F2;
+  font-family: "Rosario", sans-serif;;
+  font-size: 18px;
+  margin: 0;
+  height: 3rem;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.land-photo {
+  position: relative;
+  opacity: .8;
+  height: 500px;
+
+}
+
+.opaque-box {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background: rgba(104, 164, 177, 0.75);
+  opacity: 1.00;
+  border-radius: 20px;
+  height: 15rem;
+  margin-top: 5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+  .landing-page-desc {
+  position: relative;
+  color: #F2F2F2;
+  font-family: "Rosario", sans-serif;
+  line-height: 1.5rem;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
