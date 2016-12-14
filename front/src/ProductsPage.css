@@ -1,0 +1,336 @@
+div.productsHeader {
+  align-items: center;
+  background-color: #007BCD;
+  display: flex;
+  height: 90px;
+  justify-content: center;
+}
+
+h1 {
+  color: #FFF7F7;
+  display: inline-block;
+  font-family: 'Syncopate';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  margin: 0 auto 0 25px;
+  opacity: 1.00;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+h3 {
+  color: #FFF;
+  display: inline-block;
+  font-family: 'Rosario';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  margin: 0 auto 0 5px;
+  opacity: 1.00;
+}
+
+i {
+  color: #FFF;
+  margin-right: 2rem;
+}
+
+div.divCenter {
+  margin: 0 auto;
+}
+
+div.productsContent {
+  background-color: #05080D;
+}
+
+img.background {
+  height: 570px;
+  max-width: 100%;
+  position: relative;
+}
+
+p.itemName {
+  color: #000;
+  font-family: 'Syncopate';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  opacity: 1.00;
+  position: absolute;
+}
+
+p.royaleTop {
+  left: 15%;
+  top: 20%;
+}
+
+p.royaleMiddle {
+  left: 16%;
+  top: 24.2%;
+}
+
+p.royaleBottom {
+  left: 17%;
+  top: 28.5%;
+}
+
+img.bottleOne {
+  cursor: pointer;
+  left: 21%;
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+}
+
+img.bottleOneHover {
+  height: 83px;
+  left: 21%;
+  position: absolute;
+  top: 35%;
+  opacity: 0;
+  z-index: 1;
+}
+
+img.bottleOne:hover {
+  opacity: 0;
+}
+
+img.bottleOne:hover ~ .bottleOneHover {
+  opacity: 1;
+}
+
+img.bottleOne:hover ~ .royale {
+  font-weight: bold;
+}
+
+p.itemPrice {
+  font-family: 'Syncopate';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  opacity: 1.00;
+  position: absolute;
+}
+
+p.gray {
+  color: #505050;
+  left: 23.5%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  top: 47.5%;
+}
+
+hr.hrOne {
+  border-color: darkgrey;
+  border-style: inset;
+  left: 31%;
+  position: absolute;
+  top: 52%;
+  width: 35px;
+}
+
+p.serenityName {
+  left: 25.5%;
+  position: absolute;
+  top: 53.5%;
+}
+
+img.bottleTwo {
+  cursor: pointer;
+  left: 30%;
+  position: absolute;
+  top: 60%;
+  z-index: 2;
+}
+
+img.bottleTwoHover {
+  left: 30%;
+  position: absolute;
+  top: 60%;
+  opacity: 0;
+  z-index: 1;
+}
+
+img.bottleTwo:hover {
+  opacity: 0;
+}
+
+img.bottleTwo:hover ~ .bottleTwoHover {
+  opacity: 1;
+}
+
+img.bottleTwo:hover ~ .serenityName {
+  font-weight: bold;
+}
+
+p.white {
+  color: #F2F2F2;
+  left: 34%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  top: 82.5%;
+}
+
+hr.hrTwo {
+  border-color: darkgrey;
+  border-style: inset;
+  left: 41.5%;
+  position: absolute;
+  top: 87.3%;
+  width: 35px;
+}
+
+p.vaticanTop {
+  left: 37%;
+  top: 89%;
+}
+
+p.vaticanMiddle {
+  left: 39%;
+  top: 93%;
+}
+
+p.vaticanBottom {
+  left: 40.5%;
+  top: 97.2%;
+}
+
+img.bottleThree {
+  cursor: pointer;
+  left: 44.5%;
+  position: absolute;
+  top: 90%;
+  z-index: 2;
+}
+
+img.bottleThreeHover {
+  left: 44.5%;
+  position: absolute;
+  top: 90%;
+  opacity: 0;
+  z-index: 1;
+}
+
+img.bottleThree:hover {
+  opacity: 0;
+}
+
+img.bottleThree:hover ~ .bottleThreeHover {
+  opacity: 1;
+}
+
+img.bottleThree:hover ~ .vatican {
+  font-weight: bold;
+}
+
+p.blue {
+  left: 50%;
+  top: 123%;
+  color: #0013C5;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+@media (min-width: 1020px) {
+  div.productsHeader {
+    height: 150px;
+  }
+  h1 {
+    font-size: 86px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  i {
+    font-size: 28px;
+  }
+  img.background {
+    height: auto;
+  }
+  p.itemName {
+    font-size: 30px;
+  }
+  p.itemPrice {
+    font-size: 18px;
+  }
+  img.bottleOne {
+    left: 26%;
+    top: 45%;
+    height: 175px;
+  }
+  img.bottleOneHover {
+    left: 26%;
+    top: 45%;
+    height: 177px;
+  }
+  p.royaleTop {
+    left: 16%;
+    top: 27%;
+  }
+  p.royaleMiddle {
+    left: 17%;
+    top: 32.9%;
+  }
+  p.royaleBottom {
+    left: 18%;
+    top: 38.9%;
+  }
+  p.gray {
+    left: 34.5%;
+    top: 66%;
+  }
+  hr.hrOne {
+    left: 37%;
+    top: 72.3%;
+    width: 60px;
+  }
+  img.bottleTwo {
+    left: 31%;
+    top: 86%;
+    height: 190px;
+  }
+  img.bottleTwoHover {
+    left: 31%;
+    top: 86%;
+    height: 190px
+  }
+  p.serenityName {
+    left: 27.5%;
+    top: 73.5%;
+  }
+  p.white {
+    left: 43%;
+    top: 110.5%;
+  }
+  hr.hrTwo {
+    left: 46%;
+    top: 117%;
+    width: 60px;
+  }
+  img.bottleThree {
+    height: 240px;
+    left: 44.5%;
+    top: 130%;
+  }
+  img.bottleThreeHover {
+    height: 240px;
+    left: 44.5%;
+    top: 130%;
+  }
+  p.vaticanTop {
+    left: 35%;
+    top: 120%;
+  }
+  p.vaticanMiddle {
+    left: 37%;
+    top: 126%;
+  }
+  p.vaticanBottom {
+    left: 38.5%;
+    top: 132%;
+  }
+  p.blue {
+    left: 54.5%;
+    top: 156%;
+  }
+}
