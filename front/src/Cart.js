@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import './Cart.css';
 import cart from './CartPage.jpg';
 import axios from 'axios';
@@ -15,7 +16,7 @@ class Cart extends Component {
     return (
       <div className="cart-page-container">
         <div className="cart-header">
-          <span className="bimini-name-cart">Bimini</span>
+          <span className="bimini-name-cart"><Link to={'/'}>Bimini</Link></span>
           <p className="cart-name">Cart</p>
         </div>
         <div className="mid-section-cart">

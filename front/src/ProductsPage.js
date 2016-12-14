@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 import './ProductsPage.css';
 import background from './ProductsPage.jpg';
 import bottleOne from './bottleOne.svg';
@@ -20,10 +21,10 @@ export default class MyComponent extends Component {
       <div>
         <div className='productsHeader'>
           <div className='divCenter'>
-            <h1>Bimini</h1>
+            <h1><Link to={'/'}>Bimini</Link></h1>
             <h3>Products</h3>
           </div>
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+          <Link to={'/cart'}><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
         </div>
         <div className='productsContent'>
           <img className='background' src={background}/>
