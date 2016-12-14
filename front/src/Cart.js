@@ -10,6 +10,7 @@ class Cart extends Component {
       console.log(response.data);
     })
   }
+
   render() {
     return (
       <div className="cart-page-container">
