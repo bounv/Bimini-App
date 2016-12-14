@@ -6,7 +6,7 @@ import axios from 'axios';
 
 class Cart extends Component {
   componentDidMount (){
-    axios.get('http://localhost:3000/api/hello').then((response)=> {
+    axios.get('http://localhost:3000/api/products').then((response)=> {
       console.log(response.data);
     })
   }
