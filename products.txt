@@ -1,3 +1,3 @@
-1,VaticanPondWater,Bimini's premiere,1000.00,decanter-942521_1280.png
+1,Vatican Pond Water,Bimini's premiere,1000.00,decanter-942521_1280.png
 2,Serenity,Bimini's,2.00,bottle-159230_1280.png
-3,Aqua de Roya`l,Bimini's,1.00,bottle-1737388_1280.png
+3,Agua de Royale,Bimini's,1.00,bottle-1737388_1280.png
