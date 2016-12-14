@@ -82,7 +82,7 @@ public class Main {
                 ((request, response) -> {
 
                     JsonSerializer serializer = new JsonSerializer();
-                    String json = serializer.include("*").serialize(cart); /* is now a vehicle for what is in it*/
+                    String json = serializer.include("*").serialize(products); /* is now a vehicle for what is in it*/
                     return json;
 
                     //query parameter from url
