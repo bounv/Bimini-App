@@ -45,7 +45,7 @@ class Cart extends Component {
               <ul className="product-cart">
               {this.state.cart.map((product, index) => {
                 return (
-                <li className="product-item-cart" key={product.id}>{product.name}</li>
+                <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}</li>
               )
               })}
               </ul>

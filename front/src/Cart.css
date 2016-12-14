@@ -59,11 +59,11 @@ div.center {
   position: absolute;
   align-items: center;
   align-self: center;
-  background: rgba(176, 176, 176, 0.49);
+  background: rgba(1, 1, 1, 0.72);
   opacity: 1.00;
   border-radius: 10px;
   height: 17rem;
-  width: 18rem;
+  width: 30rem;
 }
 
 .product-cart {
@@ -74,7 +74,8 @@ div.center {
 
 .product-item-cart {
   list-style: none;
-  font-size: 32px;
+  font-size: 28px;
+  color: white;
 }
 
 .total-cart {
