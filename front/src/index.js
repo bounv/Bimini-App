@@ -4,7 +4,10 @@ import App from './App';
 import Cart from './Cart';
 import './index.css';
 
+
+
+
 ReactDOM.render(
-  <App />,
+  <Cart />,
   document.getElementById('root')
 );

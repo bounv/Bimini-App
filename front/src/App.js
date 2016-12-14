@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import jpg from './HeaderNav.jpg';
 import './App.css';
 import pic from './LandingPage2.jpg';
+import axios from 'axios';
 
 class App extends Component {
+  componentDidMount (){
+    axios.get('http://localhost:3000/api/hello').then((response)=> {
+      console.log(response.data);
+    })
+  }
+
+
   render() {
     return (
       <div className="App">

@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import './Cart.css';
-import cart from './CartPage.jpg'
+import cart from './CartPage.jpg';
+import axios from 'axios';
+
 
 class Cart extends Component {
+  componentDidMount (){
+    axios.get('http://localhost:3000/api/hello').then((response)=> {
+      console.log(response.data);
+    })
+  }
   render() {
     return (
       <div className="cart-page-container">
@@ -15,8 +22,6 @@ class Cart extends Component {
             <div className="opaque-box-cart">
               <ul className="product-cart">
                 <li className="product-item-cart">item1</li>
-                <li className="product-item-cart">item2</li>
-                <li className="product-item-cart">item3</li>
                 <li className="total-cart">total</li>
               </ul>
           </div>
