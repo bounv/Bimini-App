@@ -19,6 +19,8 @@ public class Products {
         this.imageName = imageName;
     }
 
+    public Products() {
+    }
 
     public int getId() {
         return id;

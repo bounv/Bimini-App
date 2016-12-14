@@ -9,10 +9,23 @@ public class TaxListing {
 
     double totalRate;
     ArrayList<Tax> rates;
+    double total;
+
+    public double getTotal() {
+        return total;
+    }
+
+    public TaxListing() {
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
 
     public TaxListing(double totalRate, ArrayList<Tax> rates) {
         this.totalRate = totalRate;
         this.rates = rates;
+
     }
 
     public double getTotalRate() {

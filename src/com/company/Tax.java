@@ -14,6 +14,9 @@ public class Tax {
         this.type = type;
     }
 
+    public Tax() {
+    }
+
     public double getRate() {
         return rate;
     }

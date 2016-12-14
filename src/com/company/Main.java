@@ -12,9 +12,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static ArrayList<Products> products = new ArrayList<>();
@@ -22,7 +20,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        //ArrayList<Products> products = new ArrayList<>();
         File productData = new File("products.txt");
         Scanner scanner = new Scanner(productData);
         while(scanner.hasNext()) {
@@ -85,7 +82,7 @@ public class Main {
                 ((request, response) -> {
 
                     JsonSerializer serializer = new JsonSerializer();
-                    String json = serializer.include().serialize(cart); /* is now a vehicle for what is in it*/
+                    String json = serializer.include("*").serialize(cart); /* is now a vehicle for what is in it*/
                     return json;
 
                     //query parameter from url
@@ -101,46 +98,64 @@ public class Main {
 
                 "/api/tax",
                 ((request, response) -> {
-
-                    String zip = request.queryParams("zipCode");
-
-                    String id = request.queryParams("id");
-
-
-
-                    //int idId = Integer.parseInt(id);
-
-
+                    //subtotal & taxRate & total
                     //double subtotal = Double.parseDouble(pr);
-
                     //String subtotal = usedPrice * TaxListing.get("rates");
                     //String subtotal = request.queryParams("subtotal");
                     //String taxRate =
                     //String subtotal = Products.getPrice() + Products.getPrice() * taxRate;
                     //String total = Products.getPrice() + Products.getPrice() * TaxListing.getRates();
                     //String =
+
+                    String zip = request.queryParams("zipCode");
+
+                    //double taxRate = Double.parseDouble(zip);
+
+                    //double subtotal = cart.get(id); //method in hashmap to get list of keys, then create a for loop
+
+                    //String id = request.queryParams("id");
+
+                    //double subtotal = Double.parseDouble(id);
+
+                    //double tax = subtotal * taxRate ;
+
+                    double total = 0;
+
+                    for(Map.Entry<Integer, Integer> entry : cart.entrySet()) {
+                        Integer productId = entry.getKey();
+                        Integer productQuantity = entry.getValue();
+
+                        Products x = new Products(); //Integer.parseInt(id), "name", "description", Double.parseDouble("price"), "imageName");
+                        for(Products temp : products) {
+                            if(temp.id == productId) {
+                                x = temp;
+                            }
+
+                        }
+                        total = x.getPrice() * productQuantity;
+
+                    }
+
+
                     URL taxUrl = new URL("https://taxrates.api.avalara.com/postal?postal=" + zip + "&country=US&apikey=ODeb/KozEMOsBvpNX3L40Tekut5ozlAY8uYnAUklC4Kg6A0IQIY5Lx6lYUCez3WAEHvNy91SUBzaooq6mf5/Mg==");
 
                     URLConnection uc = taxUrl.openConnection();
                     BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+                    StringBuilder sb = new StringBuilder();
+                    while(in.ready()) {
+                        sb.append(in.readLine());
+                    }
                     String inputLine = in.readLine(); //the url object that we created
 
                     //System.out.println(inputLine);
 
                     JsonParser parser = new JsonParser();
-                    Products listing = parser.parse(inputLine, Products.class);
+                    TaxListing listing = parser.parse(sb.toString(), TaxListing.class);
+                    listing.setTotal(total);
 
-                    HashMap m = new HashMap();
-
-                    m.put("zip", zip);
-                    m.put("subtotal", id);
-                    m.put("pricing", listing.getPrice());
-
-
-
-
-                    return "";
-
+                    JsonSerializer serializer = new JsonSerializer();
+                    String json = serializer.include("*").serialize(listing); /* is now a vehicle for what is in it*/
+                    return json;
                 })
 
         );
