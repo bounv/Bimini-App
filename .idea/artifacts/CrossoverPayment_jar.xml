@@ -3,6 +3,9 @@
     <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="CrossoverPayment.jar">
       <element id="module-output" name="CrossoverPayment" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jodd/jodd-json/3.6.7/jodd-json-3.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jodd/jodd-bean/3.6.7/jodd-bean-3.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jodd/jodd-core/3.6.7/jodd-core-3.6.7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.3/spark-core-2.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-simple/1.7.12/slf4j-simple-1.7.12.jar" path-in-jar="/" />
