@@ -231,7 +231,7 @@ p.blue {
   text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1020px) {
   div.productsHeader {
     height: 150px;
   }
@@ -252,5 +252,85 @@ p.blue {
   }
   p.itemPrice {
     font-size: 18px;
+  }
+  img.bottleOne {
+    left: 26%;
+    top: 45%;
+    height: 175px;
+  }
+  img.bottleOneHover {
+    left: 26%;
+    top: 45%;
+    height: 177px;
+  }
+  p.royaleTop {
+    left: 16%;
+    top: 27%;
+  }
+  p.royaleMiddle {
+    left: 17%;
+    top: 32.9%;
+  }
+  p.royaleBottom {
+    left: 18%;
+    top: 38.9%;
+  }
+  p.gray {
+    left: 34.5%;
+    top: 66%;
+  }
+  hr.hrOne {
+    left: 37%;
+    top: 72.3%;
+    width: 60px;
+  }
+  img.bottleTwo {
+    left: 31%;
+    top: 86%;
+    height: 190px;
+  }
+  img.bottleTwoHover {
+    left: 31%;
+    top: 86%;
+    height: 190px
+  }
+  p.serenityName {
+    left: 27.5%;
+    top: 73.5%;
+  }
+  p.white {
+    left: 43%;
+    top: 110.5%;
+  }
+  hr.hrTwo {
+    left: 46%;
+    top: 117%;
+    width: 60px;
+  }
+  img.bottleThree {
+    height: 240px;
+    left: 44.5%;
+    top: 130%;
+  }
+  img.bottleThreeHover {
+    height: 240px;
+    left: 44.5%;
+    top: 130%;
+  }
+  p.vaticanTop {
+    left: 35%;
+    top: 120%;
+  }
+  p.vaticanMiddle {
+    left: 37%;
+    top: 126%;
+  }
+  p.vaticanBottom {
+    left: 38.5%;
+    top: 132%;
+  }
+  p.blue {
+    left: 54.5%;
+    top: 156%;
   }
 }
