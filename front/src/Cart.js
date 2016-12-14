@@ -3,18 +3,20 @@ import {Link} from 'react-router';
 import './Cart.css';
 import cart from './CartPage.jpg';
 import axios from 'axios';
+let total = 0;
 
 
 class Cart extends Component {
   constructor(props) {
     super(props);
     this.state={
-      cart:[]
+      cart: [],
     }
   }
 
   componentDidMount() {
     this.getCart()
+    total = 0;
   }
 
   getCart() {
@@ -44,19 +46,23 @@ class Cart extends Component {
             <div className="opaque-box-cart">
               <ul className="product-cart">
               {this.state.cart.map((product, index) => {
+                total = total + product.price;
+                console.log(total);
                 return (
                 <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}</li>
               )
               })}
+              <hr style={{width: '20rem'}}/>
+              <li className='product-item-cart' style={{textAlign: 'center'}}><span>Total:</span> <span>${total}</span></li>
               </ul>
           </div>
         </div>
         <div className="button-class">
           <button className="button-cart">Checkout</button>
         </div>
-        <footer>
+        <footr>
           <p className="phone-number">555.555.5555</p>
-        </footer>
+        </footr>
       </div>
     )
   }
