@@ -81,6 +81,8 @@ public class Main {
                 "/api/get-product",
                 ((request, response) -> {
 
+
+
                     JsonSerializer serializer = new JsonSerializer();
                     String json = serializer.include("*").serialize(products); /* is now a vehicle for what is in it*/
                     return json;
@@ -98,26 +100,10 @@ public class Main {
 
                 "/api/tax",
                 ((request, response) -> {
-                    //subtotal & taxRate & total
-                    //double subtotal = Double.parseDouble(pr);
-                    //String subtotal = usedPrice * TaxListing.get("rates");
-                    //String subtotal = request.queryParams("subtotal");
-                    //String taxRate =
-                    //String subtotal = Products.getPrice() + Products.getPrice() * taxRate;
-                    //String total = Products.getPrice() + Products.getPrice() * TaxListing.getRates();
-                    //String =
+
 
                     String zip = request.queryParams("zipCode");
 
-                    //double taxRate = Double.parseDouble(zip);
-
-                    //double subtotal = cart.get(id); //method in hashmap to get list of keys, then create a for loop
-
-                    //String id = request.queryParams("id");
-
-                    //double subtotal = Double.parseDouble(id);
-
-                    //double tax = subtotal * taxRate ;
 
                     double total = 0;
 
@@ -226,6 +212,8 @@ public class Main {
                 })
 
         );
+
+
 
 
 

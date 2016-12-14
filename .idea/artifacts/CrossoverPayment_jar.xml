@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="CrossoverPayment:jar">
+  <artifact type="jar" build-on-make="true" name="CrossoverPayment:jar">
     <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="CrossoverPayment.jar">
       <element id="module-output" name="CrossoverPayment" />
