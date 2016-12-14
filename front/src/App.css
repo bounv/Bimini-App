@@ -9,6 +9,10 @@ a {
   color: #FFF;
 }
 
+.list-title a {
+  -webkit-text-stroke: .5px black;
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
@@ -20,8 +24,8 @@ a {
   align-self: flex-start;
   position: absolute;
   margin: 0;
-  margin-top: .5rem;
   padding: 0;
+  justify-content: flex-end;
   width: 100%;
   font-size: 18px;
   font-family:"Rosario", sans-serif;
@@ -29,22 +33,27 @@ a {
 }
 
 .bimini-name {
+  margin-left: 0;
   list-style: none;
   font-family: 'Syncopate', sans-serif;
   color: #56CCF2;
   -webkit-text-stroke: 1px #2F80ED;
   font-size: 34px;
+  position: absolute;
 }
 
 .list-title {
-  margin-left: 2rem;
   list-style: none;
   margin-top: .5rem;
+  margin-right: 2rem;
+}
+
+.list-title:hover a {
+  color: #2F80ED;
 }
 
 .Nav-photo {
   height: 126px;
-  opacity: .7;
 }
 
 .mid-section {
@@ -104,7 +113,6 @@ a {
     align-self: flex-start;
     position: absolute;
     margin: 0;
-    margin-top: .5rem;
     padding: 0;
     width: 100%;
     font-size: 18px;
@@ -121,7 +129,7 @@ a {
   }
 
   .list-title {
-    margin-left: 4rem;
+    margin-right: 4rem;
     list-style: none;
     font-size: 22px;
     margin-top: .5rem;
@@ -139,22 +147,16 @@ a {
 }
 @media (min-width:600px){
 
-  .nav-titles {
-    margin-top: .5rem;
-  }
-
   .Nav-photo {
     height: 160px;
   }
 
   .bimini-name {
     font-size: 42px;
-    margin-left: 3rem;
     margin-top: .5rem;
   }
 
   .list-title {
-    margin-left: 6rem;
     list-style: none;
     font-size: 28px;
     margin-top: 1rem;
@@ -172,10 +174,9 @@ a {
 
   .nav-titles {
     display: flex;
-    justify-content:center;
+    justify-content: flex-end;
     position: absolute;
-    margin: 0;
-    margin-top: 1.5rem;
+    margin: 0 1rem 0 0;
     padding: 0;
     width: 100%;
     font-size: 18px;
@@ -187,7 +188,6 @@ a {
     display: flex;
     flex-direction: column;
     height: 200px;
-    opacity: .7;
   }
 
   .bimini-name {
@@ -196,11 +196,9 @@ a {
     color: #56CCF2;
     -webkit-text-stroke: 1px #2F80ED;
     font-size: 52px;
-    margin-left: 3rem;
   }
 
   .list-title {
-    margin-left: 6rem;
     list-style: none;
     font-size: 28px;
     margin-top: 1rem;

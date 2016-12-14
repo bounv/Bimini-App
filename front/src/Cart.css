@@ -11,20 +11,33 @@
   height: 97px;
 }
 
+div.center {
+  margin: 0 auto;
+}
+
 .bimini-name-cart {
-  margin: 0;
-  font-size: 32px;
-  font-family:'Syncopate', sans-serif;
   color: #FFF7F7;
-  text-shadow: 1px 1px 1px black;
+  display: inline-block;
+  font-family: 'Syncopate';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  margin: 0 auto 0 25px;
+  opacity: 1.00;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
 
 .cart-name {
-  margin: 0;
-  margin-left: 1rem;
-  color: #FFF7F7;
-  font-family:'Rosario', sans-serif;
+  color: #FFF;
+  display: inline-block;
+  font-family: 'Rosario';
   font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  margin: 0 auto 0 5px;
+  opacity: 1.00;
 }
 
 .mid-section-cart {
@@ -100,4 +113,16 @@ footer {
   border-radius: 5px;
   font-size: 22px;
   background: rgba(255, 255, 255, 0.87);
+}
+
+@media (min-width: 1020px) {
+  div.cart-header {
+    height: 150px;
+  }
+  .bimini-name-cart {
+    font-size: 86px;
+  }
+  .cart-name {
+    font-size: 36px;
+  }
 }

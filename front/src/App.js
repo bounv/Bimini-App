@@ -18,8 +18,8 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={jpg} className="Nav-photo" alt="image" />
+          <h1 className="bimini-name">Bimini</h1>
           <ul className="nav-titles">
-            <li className="bimini-name">Bimini</li>
             <li className="list-title"><Link to={"/products"}>Products</Link></li>
             <li className="list-title"><Link to={"/cart"}>Cart</Link></li>
           </ul>
