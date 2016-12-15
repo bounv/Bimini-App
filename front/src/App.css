@@ -68,7 +68,7 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: #369af8;
-  height: 35rem;
+  height: 100vh;
 }
 
 .slogan-main {

@@ -11,7 +11,7 @@ class Cart extends Component {
     super(props);
     this.state={
       cart: [],
-      id:'',
+      idNumber:'',
     }
   }
 
@@ -43,10 +43,10 @@ class Cart extends Component {
     });
   }
 
-  onRemoveClick(id, e){
+  onRemoveClick(idNumber, e){
     e.preventDefault();
-    console.log(id);
-    axios.post('http://localhost:3000'+ '/api/remove-product?id=' + id)
+    console.log(idNumber);
+    axios.post('http://localhost:3000'+ '/api/remove-product?id=' + idNumber)
       .then((response)=>{
         // console.log(cart.id);
         this.getCart();
@@ -54,7 +54,6 @@ class Cart extends Component {
       .catch((error)=> {
         console.log(error);
       });
-
   }
 
   render() {
@@ -73,10 +72,15 @@ class Cart extends Component {
               {this.state.cart.map((product, index) => {
                 total = total + product.price;
                 // console.log(total);
-                let id = product.id
+                let idNumber = product.id
+                console.log(product)
                 return (
-                <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}
-                  <button onClick={this.onRemoveClick.bind(this, id)}>Delete</button>
+                <li className="product-item-cart" key={product.id}>
+                <controls style={{marginRight: '5rem'}}>
+                <i className="fa fa-times" aria-hidden="true" style={{color:'red', marginRight:'.5rem'}} onClick={this.onRemoveClick.bind(this, idNumber)}></i>
+                <input style={{maxWidth: '2.75rem'}} type='number' min='1' placeholder= {'qty: ' + product.quantity} />
+                </controls>
+                {product.name}: ${product.price}
                 </li>
               )
               })}
@@ -86,7 +90,7 @@ class Cart extends Component {
           </div>
         </div>
         <div className="button-class">
-          <button className="button-cart">Checkout</button>
+          <Link to='/checkout'><button className="button-cart">Checkout</button></Link>
         </div>
         <footr>
           <p className="phone-number">555.555.5555</p>

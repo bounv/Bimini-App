@@ -1,0 +1,16 @@
+.cart-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007BCD;
+  height: 97px;
+}
+
+div.center {
+  margin: 0 auto;
+}
+
+.middle-section {
+  background-color: #369af8;
+  height: 100vh;
+}

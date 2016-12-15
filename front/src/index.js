@@ -5,6 +5,7 @@ import App from './App';
 import Cart from './Cart';
 import ProductsPage from './ProductsPage'
 import Product from './Product'
+import Checkout from './Checkout';
 import './index.css';
 
 
@@ -16,6 +17,7 @@ ReactDOM.render((
       <Route path="products" component={ProductsPage}/>
       <Route path="cart" component={Cart}/>
       <Route path="products/:productId" component={Product}/>
+      <Route path="checkout" component={Checkout}/>
       {/* <Route path="*" component={NoMatch}/> */}
   </Router>
 ), document.getElementById('root'));
