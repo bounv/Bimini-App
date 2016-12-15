@@ -2,8 +2,27 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Checkout.css';
 import { Link } from 'react-router';
+let zipSubmitted = false;
 
 export default class Checkout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {zip: 0, total: 0, tax: 0}
+  }
+
+  onZipChange(e) {
+    console.log(e.target.value)
+    this.setState({zip: e.target.value})
+  }
+
+  calculateTax(e) {
+    e.preventDefault();
+    axios.get('http://localhost:3000' + '/api/tax?zipCode=' + this.state.zip).then((response) => {
+      this.setState({total: response.data.total, tax: response.data.totalRate})
+      zipSubmitted = true;
+    })
+  }
+
   render() {
     return(
       <div className="checkout-container">
@@ -15,8 +34,15 @@ export default class Checkout extends Component {
         </div>
         <div className="middle-section">
             <div className="center-inputs">
-              <input className='checkout-inputs' style={{maxWidth: '5.75rem'}} type='number' maxlength='5' placeholder='Enter ZipCode' />
-              <button className='checkout-inputs'>Enter</button>
+              <form onSubmit={this.calculateTax.bind(this)}>
+                <input onChange={this.onZipChange.bind(this)} className='checkout-inputs' style={{maxWidth: '5.75rem'}} type='number' placeholder='Enter ZipCode' />
+                <button className='checkout-inputs'>Enter</button>
+              </form>
+            </div>
+            <div className='totals' style={{textAlign: 'center', display: zipSubmitted ? 'block' : 'none'}}>
+              <p>subtotal: {this.state.total}</p>
+              <p>tax: {this.state.tax}</p>
+              <p>total: {parseInt(this.state.total + (this.state.total * (this.state.tax/100)), 10)}</p>
             </div>
         </div>
       </div>
