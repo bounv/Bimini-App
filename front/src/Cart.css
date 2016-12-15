@@ -55,6 +55,7 @@ div.center {
 }
 
 .opaque-box-cart {
+  justify-content: space-around;
   display: flex;
   position: absolute;
   align-items: center;
@@ -67,6 +68,8 @@ div.center {
 }
 
 .product-cart {
+  padding: 0;
+  justify-content: space-around;
   display: flex;
   align-self: center;
   padding: 5px;
@@ -86,7 +89,7 @@ div.center {
   font-size: 32px;
 }
 
-footer {
+footr {
   background-color: #007BCD;
   height: 101px;
   display: flex;
