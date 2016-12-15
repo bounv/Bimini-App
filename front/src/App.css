@@ -2,6 +2,8 @@
   box-sizing: border-box;
   text-align: center;
   -webkit-font-smoothing: antialiased;
+  background-color: #007BCD;
+
 }
 
 a {
@@ -66,6 +68,7 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: #007BCD;
+  height: 35rem;
 }
 
 .slogan-main {
@@ -95,7 +98,7 @@ a {
 .opaque-box {
   display: flex;
   align-items: center;
-  position: absolute;
+  /*position: absolute;*/
   background: rgba(32, 59, 64, 0.75);
   opacity: 1.00;
   border-radius: 20px;
@@ -105,7 +108,7 @@ a {
 }
 
 .landing-page-desc {
-  position: relative;
+  /*position: relative;*/
   color: #F2F2F2;
   font-family: "Rosario", sans-serif;
   line-height: 1.5rem;
