@@ -14,8 +14,10 @@ export default class Checkout extends Component {
           </div>
         </div>
         <div className="middle-section">
-          <input style={{maxWidth: '5.75rem'}} type='number' maxlength='5' placeholder='Enter ZipCode' />
-          <button>Enter</button>
+            <div className="center-inputs">
+              <input className='checkout-inputs' style={{maxWidth: '5.75rem'}} type='number' maxlength='5' placeholder='Enter ZipCode' />
+              <button className='checkout-inputs'>Enter</button>
+            </div>
         </div>
       </div>
     )
