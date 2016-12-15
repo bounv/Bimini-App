@@ -52,7 +52,7 @@ class Cart extends Component {
                 <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}</li>
               )
               })}
-              <hr style={{width: '20rem'}}/>
+              <hr style={{width: '100%'}}/>
               <li className='product-item-cart' style={{textAlign: 'center'}}><span>Total:</span> <span>${total}</span></li>
               </ul>
           </div>

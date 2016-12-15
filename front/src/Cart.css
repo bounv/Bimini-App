@@ -69,10 +69,8 @@ div.center {
 
 .product-cart {
   padding: 0;
-  justify-content: space-around;
   display: flex;
   align-self: center;
-  padding: 5px;
   flex-direction: column;
   line-height: 3.5rem;
 }
@@ -120,6 +118,14 @@ footr {
   font-size: 22px;
   background: rgba(255, 255, 255, 0.87);
 }
+
+@media (min-width: 700px) {
+  .opaque-box-cart {
+    width: 60%;
+  }
+
+}
+
 
 @media (min-width: 1020px) {
   div.cart-header {
