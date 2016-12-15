@@ -122,7 +122,7 @@ public class Main {
                             }
 
                         }
-                        total = x.getPrice() * productQuantity;
+                        total += x.getPrice() * productQuantity;
 
                     }
 
@@ -183,7 +183,7 @@ public class Main {
 
                     int idId = Integer.parseInt(id);
 
-                    cart.remove(idId, 1);
+                    cart.remove(idId);
 
                     return "";
 
