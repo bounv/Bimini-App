@@ -45,7 +45,7 @@ div.productsContent {
 }
 
 img.background {
-  height: 570px;
+  height: 113vh;
   max-width: 100%;
   position: relative;
 }
@@ -62,17 +62,17 @@ p.itemName {
 }
 
 p.royaleTop {
-  left: 15%;
+  left: 15.5%;
   top: 20%;
 }
 
 p.royaleMiddle {
-  left: 16%;
+  left: 16.5%;
   top: 24.2%;
 }
 
 p.royaleBottom {
-  left: 17%;
+  left: 17.5%;
   top: 28.5%;
 }
 
@@ -231,7 +231,13 @@ p.blue {
   text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 950px) {
+  img.background {
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
   div.productsHeader {
     height: 150px;
   }
@@ -243,9 +249,6 @@ p.blue {
   }
   i {
     font-size: 28px;
-  }
-  img.background {
-    height: auto;
   }
   p.itemName {
     font-size: 30px;
