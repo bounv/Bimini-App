@@ -2,6 +2,8 @@
   box-sizing: border-box;
   text-align: center;
   -webkit-font-smoothing: antialiased;
+  background-color: #007BCD;
+
 }
 
 a {
@@ -10,12 +12,14 @@ a {
 }
 
 .list-title a {
-  -webkit-text-stroke: .5px black;
+  /*-webkit-text-stroke: .5px black;*/
 }
 
 .App-header {
   display: flex;
   flex-direction: column;
+  height: 5rem;
+  background-color: #007BCD;
 }
 
 .nav-titles {
@@ -24,6 +28,7 @@ a {
   align-self: flex-start;
   position: absolute;
   margin: 0;
+  margin-top: 1rem;
   padding: 0;
   justify-content: flex-end;
   width: 100%;
@@ -33,11 +38,12 @@ a {
 }
 
 .bimini-name {
-  margin-left: 0;
+  margin-left: .5rem;
   list-style: none;
+  margin-top: 1rem;
   font-family: 'Syncopate', sans-serif;
-  color: #56CCF2;
-  -webkit-text-stroke: 1px #2F80ED;
+  color: white;
+  /*-webkit-text-stroke: 1px #2F80ED;*/
   font-size: 34px;
   position: absolute;
 }
@@ -57,27 +63,30 @@ a {
 }
 
 .mid-section {
+  /*outline: 2px solid red;*/
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #369af8;
+  height: 35rem;
 }
 
 .slogan-main {
   display: flex;
   flex-direction: column;
   justify-content:center;
-  background-color: #007BCD;
-  color: #F2F2F2;
+  background-color: #efefef;
+  color:#007BCD;
   font-family: "Rosario", sans-serif;;
   font-size: 18px;
   margin: 0;
   height: 3rem;
 }
 
-.image-container {
+/*.image-container {
   display: flex;
   flex-direction: column;
-}
+}*/
 
 .land-photo {
   position: relative;
@@ -89,8 +98,8 @@ a {
 .opaque-box {
   display: flex;
   align-items: center;
-  position: absolute;
-  background: rgba(104, 164, 177, 0.75);
+  /*position: absolute;*/
+  background: rgba(32, 59, 64, 0.75);
   opacity: 1.00;
   border-radius: 20px;
   height: 15rem;
@@ -99,7 +108,7 @@ a {
 }
 
 .landing-page-desc {
-  position: relative;
+  /*position: relative;*/
   color: #F2F2F2;
   font-family: "Rosario", sans-serif;
   line-height: 1.5rem;
@@ -123,7 +132,7 @@ a {
   .bimini-name {
     list-style: none;
     font-family: 'Syncopate', sans-serif;
-    color: #56CCF2;
+    /*color: #56CCF2;*/
     -webkit-text-stroke: 1px #2F80ED;
     font-size: 34px;
   }

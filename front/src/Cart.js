@@ -3,13 +3,33 @@ import {Link} from 'react-router';
 import './Cart.css';
 import cart from './CartPage.jpg';
 import axios from 'axios';
+let total = 0;
 
 
 class Cart extends Component {
-  componentDidMount (){
+  constructor(props) {
+    super(props);
+    this.state={
+      cart: [],
+    }
+  }
+
+  componentDidMount() {
+    this.getCart()
+    total = 0;
+  }
+
+  getCart() {
     axios.get('http://localhost:3000/api/products').then((response)=> {
       console.log(response.data);
+      let cart=(response.data);
+      this.setState({
+        cart
+      })
     })
+    .catch((error)=> {
+      console.log(error);
+    });
   }
 
   render() {
@@ -25,17 +45,24 @@ class Cart extends Component {
           <img className="cart-image" src={cart} alt='image' />
             <div className="opaque-box-cart">
               <ul className="product-cart">
-                <li className="product-item-cart">item1</li>
-                <li className="total-cart">total</li>
+              {this.state.cart.map((product, index) => {
+                total = total + product.price;
+                console.log(total);
+                return (
+                <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}</li>
+              )
+              })}
+              <hr style={{width: '100%'}}/>
+              <li className='product-item-cart' style={{textAlign: 'center'}}><span>Total:</span> <span>${total}</span></li>
               </ul>
           </div>
         </div>
         <div className="button-class">
           <button className="button-cart">Checkout</button>
         </div>
-        <footer>
+        <footr>
           <p className="phone-number">555.555.5555</p>
-        </footer>
+        </footr>
       </div>
     )
   }
