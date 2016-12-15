@@ -24,7 +24,7 @@ public class Main {
         Scanner scanner = new Scanner(productData);
         while(scanner.hasNext()) {
             String read = scanner.nextLine();
-            String [] p = read.split(",");
+            String p [] = read.split(";");
             Products prod = new Products(Integer.parseInt(p[0]), p[1], p[2], Double.parseDouble(p[3]), p[4]);
             products.add(prod);
         }
@@ -104,6 +104,10 @@ public class Main {
 
                     String zip = request.queryParams("zipCode");
 
+                    //String total = request.queryParams("subtotal");
+
+                    //double subtotal = Double.parseDouble(total);
+
 
                     double total = 0;
 
@@ -118,7 +122,7 @@ public class Main {
                             }
 
                         }
-                        total = x.getPrice() * productQuantity;
+                        total += x.getPrice() * productQuantity;
 
                     }
 
@@ -179,7 +183,7 @@ public class Main {
 
                     int idId = Integer.parseInt(id);
 
-                    cart.remove(idId, 1);
+                    cart.remove(idId);
 
                     return "";
 
