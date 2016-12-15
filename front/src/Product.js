@@ -36,9 +36,12 @@ export default class Product extends Component {
       productsLoaded = true;
     }
     return (
-      <div>
+      <div style={{
+        display:'flex',
+        flexDirection:'column',
+      }}>
         <header style={{
-          height: '5rem',
+          height: '7rem',
           backgroundColor: '#007BCD',
           display: 'flex',
           justifyContent: 'center',
@@ -68,12 +71,18 @@ export default class Product extends Component {
           display: 'block',
           height: '100vh'
         }}>
-          <img src={productsLoaded ? this.state.products[this.props.params.productId].imageName : null} />
-          <description>{productsLoaded
-              ? this.state.products[this.props.params.productId].description
-              : null}
-          </description>
-          <button onClick={this.addToCart.bind(this)}>Add to Cart</button>
+        <div className="main-section" style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
+            <img style={{width:'5rem', marginTop:'2rem' }} src={productsLoaded ? this.state.products[this.props.params.productId].imageName : null} />
+            <description style={{marginTop:'2rem', width: '15rem', color:'white', fontFamily:'Rosario'}}>{productsLoaded
+                ? this.state.products[this.props.params.productId].description
+                : null}
+            </description>
+            <button style={{marginTop:'2rem', border: '2px solid white', backgroundColor:'white', borderRadius:'5px'}} onClick={this.addToCart.bind(this)}>Add to Cart</button>
+          </div>
         </content>
       </div>
     );
