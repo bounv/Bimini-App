@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import { browserHistory } from 'react-router';
 
 export default class Product extends Component {
   constructor(props) {
@@ -21,6 +22,13 @@ export default class Product extends Component {
     });
   }
 
+  addToCart() {
+    axios.post('http://localhost:3000' +'/api/add-product?id=' + this.state.products[this.props.params.productId].id).then((response)=>{
+       console.log(response.data);
+      browserHistory.push('/products')
+    })
+  }
+
   render() {
     let productsLoaded = false;
     if (this.state.products.length > 0) {
@@ -31,6 +39,7 @@ export default class Product extends Component {
         <header>
           {productsLoaded ? this.state.products[this.props.params.productId].name : null}
         </header>
+        <button onClick={this.addToCart.bind(this)}>Add to Cart</button>
       </div>
     );
   }
