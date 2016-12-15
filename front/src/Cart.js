@@ -11,6 +11,7 @@ class Cart extends Component {
     super(props);
     this.state={
       cart: [],
+      id:'',
     }
   }
 
@@ -20,16 +21,40 @@ class Cart extends Component {
   }
 
   getCart() {
-    axios.get('http://localhost:3000/api/products').then((response)=> {
-      console.log(response.data);
-      let cart=(response.data);
-      this.setState({
-        cart
+    axios.get('http://localhost:3000/api' + '/get-cart')
+      .then((responseCart)=> {
+      axios.get('http://localhost:3000/api' + '/products')
+        .then((responseProducts)=> {
+          var cartItems =responseProducts.data.filter((v)=>{
+            return responseCart.data[''+v.id+''] > 0;
+        });
+          var cartItemQuantity = cartItems.map((v)=>{
+            var newItem = v;
+          newItem.quantity = responseCart.data[''+v.id+''];
+          return newItem;
+        });
+        this.setState({
+          cart: cartItemQuantity
+        })
       })
     })
     .catch((error)=> {
       console.log(error);
     });
+  }
+
+  onRemoveClick(id, e){
+    e.preventDefault();
+    console.log(id);
+    axios.post('http://localhost:3000'+ '/api/remove-product?id=' + id)
+      .then((response)=>{
+        // console.log(cart.id);
+        this.getCart();
+      })
+      .catch((error)=> {
+        console.log(error);
+      });
+
   }
 
   render() {
@@ -47,9 +72,12 @@ class Cart extends Component {
               <ul className="product-cart">
               {this.state.cart.map((product, index) => {
                 total = total + product.price;
-                console.log(total);
+                // console.log(total);
+                let id = product.id
                 return (
-                <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}</li>
+                <li className="product-item-cart" key={product.id}>{product.name}: ${product.price}
+                  <button onClick={this.onRemoveClick.bind(this, id)}>Delete</button>
+                </li>
               )
               })}
               <hr style={{width: '100%'}}/>
