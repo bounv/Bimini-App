@@ -63,21 +63,21 @@ div.center {
   background: rgba(1, 1, 1, 0.72);
   opacity: 1.00;
   border-radius: 10px;
-  height: 17rem;
-  width: 30rem;
+  height: 15rem;
+  width: 90%;
 }
 
 .product-cart {
   padding: 0;
-  justify-content: space-around;
   display: flex;
+  align-self: center;
   flex-direction: column;
   line-height: 3.5rem;
 }
 
 .product-item-cart {
   list-style: none;
-  font-size: 28px;
+  font-size: 18px;
   color: white;
 }
 
@@ -118,6 +118,14 @@ footr {
   font-size: 22px;
   background: rgba(255, 255, 255, 0.87);
 }
+
+@media (min-width: 700px) {
+  .opaque-box-cart {
+    width: 60%;
+  }
+
+}
+
 
 @media (min-width: 1020px) {
   div.cart-header {
