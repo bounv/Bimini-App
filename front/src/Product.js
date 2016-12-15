@@ -20,6 +20,7 @@ export default class Product extends Component {
       console.log(error);
     });
   }
+
   render() {
     let productsLoaded = false;
     if (this.state.products.length > 0) {
