@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router';
 
 export default class Product extends Component {
   constructor(props) {
@@ -27,9 +28,43 @@ export default class Product extends Component {
     }
     return (
       <div>
-        <header>
-          {productsLoaded ? this.state.products[this.props.params.productId].name : null}
+        <header style={{
+          height: '5rem',
+          backgroundColor: '#007BCD',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <Link to={'/'}>
+            <h1 style={{
+              margin: 0
+            }}>Bimini</h1>
+          </Link>
+          <h3 style={{
+            margin: '0 0 0 .5rem'
+          }}>{productsLoaded
+              ? this.state.products[this.props.params.productId].name
+              : null}</h3>
+          <Link to={'/cart'}>
+            <i className="fa fa-shopping-cart" aria-hidden="true" style={{
+              position: 'absolute',
+              right: '5%',
+              top: '2%',
+              margin: 0
+            }}></i>
+          </Link>
         </header>
+        <content style={{
+          backgroundColor: '#369af8',
+          display: 'block',
+          height: '100vh'
+        }}>
+          <img src={productsLoaded ? this.state.products[this.props.params.productId].imageName : null} />
+          <description>{productsLoaded
+              ? this.state.products[this.props.params.productId].description
+              : null}
+          </description>
+        </content>
       </div>
     );
   }
