@@ -39,10 +39,14 @@ export default class Checkout extends Component {
                 <button className='checkout-inputs'>Enter</button>
               </form>
             </div>
-            <div className='totals' style={{textAlign: 'center', display: this.state.zipSubmitted ? 'block' : 'none'}}>
-              <p>subtotal: {this.state.total}</p>
-              <p>tax: {this.state.tax}</p>
-              <p>total: {Math.round10(this.state.total + (this.state.total * (this.state.tax/100)), -2)}</p>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              <div className='totals opaque-box' style={{marginTop: '2rem', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', display: this.state.zipSubmitted ? 'flex' : 'none'}}>
+                <h2 style={{color: 'white', fontFamily: 'Rosario', marginBottom: 0, textDecoration: 'underline'}}>Receipt</h2>
+                <p style={{color: 'white', fontFamily: 'Rosario'}}>subtotal: {this.state.total}</p>
+                <p style={{color: 'white', fontFamily: 'Rosario'}}>tax: {this.state.tax}</p>
+                <p style={{color: 'white', fontFamily: 'Rosario'}}>total: {Math.round10(this.state.total + (this.state.total * (this.state.tax/100)), -2)}</p>
+                <h2 style={{color: 'white', fontFamily: 'Rosario'}}>Thank you!</h2>
+              </div>
             </div>
         </div>
       </div>

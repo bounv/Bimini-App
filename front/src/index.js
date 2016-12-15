@@ -6,6 +6,7 @@ import Cart from './Cart';
 import ProductsPage from './ProductsPage'
 import Product from './Product'
 import Checkout from './Checkout';
+import NoMatch from './NoMatch'
 import './index.css';
 
 
@@ -18,6 +19,6 @@ ReactDOM.render((
       <Route path="cart" component={Cart}/>
       <Route path="products/:productId" component={Product}/>
       <Route path="checkout" component={Checkout}/>
-      {/* <Route path="*" component={NoMatch}/> */}
+      <Route path="*" component={NoMatch}/>
   </Router>
 ), document.getElementById('root'));
