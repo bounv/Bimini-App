@@ -29,7 +29,7 @@ export default class MyComponent extends Component {
         <div className='productsContent'>
           <img className='background' src={background}/>
           <div className='royale'>
-            <img className='bottleOne' src={bottleOne}/>
+            <Link to={"/products/" + 2}><img className='bottleOne' src={bottleOne}/></Link>
             <p className='itemName royaleTop royale'>Agua</p>
             <p className='itemName royaleMiddle royale'>de</p>
             <p className='itemName royaleBottom royale'>Royale</p>
@@ -38,14 +38,14 @@ export default class MyComponent extends Component {
           </div>
           <hr className='hrOne'/>
           <div className='Serenity'>
-            <img className='bottleTwo' src={bottleTwo} />
+            <Link to={"/products/" + 1}><img className='bottleTwo' src={bottleTwo} /></Link>
             <p className='itemName serenityName'>Serenity</p>
             <img className='bottleTwoHover' src={bottleTwoHover} />
             <p className='itemPrice white'>$2/bottle</p>
           </div>
           <hr className='hrTwo'/>
           <div className='vaticanPondWater'>
-            <img className='bottleThree' src={bottleThree} />
+            <Link to={"/products/" + 0}><img className='bottleThree' src={bottleThree} /></Link>
             <p className='itemName vaticanTop vatican'>Vatican</p>
             <p className='itemName vaticanMiddle vatican'>Pond</p>
             <p className='itemName vaticanBottom vatican'>Water</p>
