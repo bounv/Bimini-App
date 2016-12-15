@@ -62,19 +62,21 @@ div.center {
   background: rgba(1, 1, 1, 0.72);
   opacity: 1.00;
   border-radius: 10px;
-  height: 17rem;
-  width: 30rem;
+  height: 15rem;
+  width: 90%;
 }
 
 .product-cart {
   display: flex;
+  align-self: center;
+  padding: 5px;
   flex-direction: column;
   line-height: 3.5rem;
 }
 
 .product-item-cart {
   list-style: none;
-  font-size: 28px;
+  font-size: 18px;
   color: white;
 }
 

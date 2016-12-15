@@ -10,12 +10,14 @@ a {
 }
 
 .list-title a {
-  -webkit-text-stroke: .5px black;
+  /*-webkit-text-stroke: .5px black;*/
 }
 
 .App-header {
   display: flex;
   flex-direction: column;
+  height: 5rem;
+  background-color: #007BCD;
 }
 
 .nav-titles {
@@ -24,6 +26,7 @@ a {
   align-self: flex-start;
   position: absolute;
   margin: 0;
+  margin-top: 1rem;
   padding: 0;
   justify-content: flex-end;
   width: 100%;
@@ -33,11 +36,12 @@ a {
 }
 
 .bimini-name {
-  margin-left: 0;
+  margin-left: .5rem;
   list-style: none;
+  margin-top: 1rem;
   font-family: 'Syncopate', sans-serif;
-  color: #56CCF2;
-  -webkit-text-stroke: 1px #2F80ED;
+  color: white;
+  /*-webkit-text-stroke: 1px #2F80ED;*/
   font-size: 34px;
   position: absolute;
 }
@@ -66,8 +70,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content:center;
-  background-color: #007BCD;
-  color: #F2F2F2;
+  background-color: #efefef;
+  color:#007BCD;
   font-family: "Rosario", sans-serif;;
   font-size: 18px;
   margin: 0;

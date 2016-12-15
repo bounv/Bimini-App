@@ -17,7 +17,6 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={jpg} className="Nav-photo" alt="image" />
           <h1 className="bimini-name">Bimini</h1>
           <ul className="nav-titles">
             <li className="list-title"><Link to={"/products"}>Products</Link></li>
