@@ -10,7 +10,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/CrossoverPayment.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products.txt" afterPath="$PROJECT_DIR$/products.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="CrossoverPayment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2610">
+            <state relative-caret-position="-1620">
               <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -78,8 +77,8 @@
       <file leaf-file-name="products.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/products.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="393" selection-start-line="0" selection-start-column="393" selection-end-line="0" selection-end-column="393" />
+            <state relative-caret-position="30">
+              <caret line="2" column="213" selection-start-line="2" selection-start-column="213" selection-end-line="2" selection-end-column="213" />
               <folding />
             </state>
           </provider>
@@ -126,8 +125,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Products.java" />
         <option value="$PROJECT_DIR$/src/com/company/TaxListing.java" />
         <option value="$PROJECT_DIR$/src/com/company/Tax.java" />
-        <option value="$PROJECT_DIR$/products.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/products.txt" />
       </list>
     </option>
   </component>
@@ -139,8 +138,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
-    <option name="y" value="35" />
+    <option name="x" value="35" />
+    <option name="y" value="110" />
     <option name="width" value="1405" />
     <option name="height" value="772" />
   </component>
@@ -672,11 +671,25 @@
       <option name="project" value="LOCAL" />
       <updated>1481833208367</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Jar update">
+      <created>1481835510629</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1481835510629</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Jar update">
+      <created>1481835727218</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1481835727218</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="35" width="1405" height="772" extended-state="0" />
+    <frame x="35" y="110" width="1405" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -876,15 +889,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/products.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="393" selection-start-line="0" selection-start-column="393" selection-end-line="0" selection-end-column="393" />
+        <state relative-caret-position="30">
+          <caret line="2" column="213" selection-start-line="2" selection-start-column="213" selection-end-line="2" selection-end-column="213" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2610">
+        <state relative-caret-position="-1620">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
