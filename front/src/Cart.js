@@ -114,12 +114,12 @@ class Cart extends Component {
                 <span>${this.state.total}</span>
               </li>
             </ul>
+            <div className="button-class">
+              <Link to='/checkout'>
+                <button className="button-cart">Checkout</button>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="button-class">
-          <Link to='/checkout'>
-            <button className="button-cart">Checkout</button>
-          </Link>
         </div>
         <footr>
           <p className="phone-number">555.555.5555</p>

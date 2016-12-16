@@ -69,7 +69,7 @@ export default class Product extends Component {
         <content style={{
           backgroundColor: '#369af8',
           display: 'block',
-          height: '100vh'
+          height: '85vh'
         }}>
         <div className="main-section" style={{
           display: 'flex',
@@ -81,7 +81,7 @@ export default class Product extends Component {
                 ? this.state.products[this.props.params.productId].description
                 : null}
             </description>
-            <button style={{marginTop:'2rem', border: '2px solid white', backgroundColor:'white', borderRadius:'5px'}} onClick={this.addToCart.bind(this)}>Add to Cart</button>
+            <button style={{cursor: 'pointer', marginTop:'2rem', border: '2px solid white', backgroundColor:'white', borderRadius:'5px'}} onClick={this.addToCart.bind(this)}>Add to Cart</button>
           </div>
         </content>
       </div>

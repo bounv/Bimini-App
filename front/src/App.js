@@ -23,7 +23,7 @@ class App extends Component {
             <li className="list-title"><Link to={"/cart"}>Cart</Link></li>
           </ul>
         </div>
-        <h2 className="slogan-main">Water from the heavens</h2>
+        <h2 className="slogan-main">"Water from the Heavens"</h2>
         <div className="mid-section">
           {/* <img src={pic} className="land-photo" alt="image" /> */}
           <div className="opaque-box">

@@ -36,14 +36,14 @@ export default class Checkout extends Component {
             <div className="center-inputs">
               <form onSubmit={this.calculateTax.bind(this)}>
                 <input onChange={this.onZipChange.bind(this)} className='checkout-inputs' style={{maxWidth: '5.75rem'}} type='number' placeholder='Enter ZipCode' />
-                <button className='checkout-inputs'>Enter</button>
+                <button style={{cursor: 'pointer'}} className='checkout-inputs'>Enter</button>
               </form>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               <div className='totals opaque-box' style={{marginTop: '2rem', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', display: this.state.zipSubmitted ? 'flex' : 'none'}}>
                 <h2 style={{color: 'white', fontFamily: 'Rosario', marginBottom: 0, textDecoration: 'underline'}}>Receipt</h2>
                 <p style={{color: 'white', fontFamily: 'Rosario'}}>subtotal: {this.state.total}</p>
-                <p style={{color: 'white', fontFamily: 'Rosario'}}>tax: {this.state.tax}</p>
+                <p style={{color: 'white', fontFamily: 'Rosario'}}>tax: {(this.state.total * (this.state.tax/100))}</p>
                 <hr style={{width: '25px'}}/>
                 <p style={{color: 'white', fontFamily: 'Rosario', fontWeight: 'bold'}}>total: {Math.round10(this.state.total + (this.state.total * (this.state.tax/100)), -2)}</p>
                 <h2 style={{color: 'white', fontFamily: 'Rosario'}}>Thank you!</h2>
