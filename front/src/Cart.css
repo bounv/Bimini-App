@@ -64,7 +64,6 @@ div.center {
   background: rgba(1, 1, 1, 0.72);
   opacity: 1.00;
   border-radius: 10px;
-  height: 15rem;
   width: 99%;
   padding: 2rem;
 }
@@ -105,21 +104,27 @@ footr {
   font-family:'Rosario', sans-serif;
 }
 
-.button-class {
-  display: flex;
-  justify-content: space-around;
-  background-color: #007BCD;
-}
 .button-cart {
   border: none;
   height: 2rem;
   cursor: pointer;
   border-radius: 5px;
   font-size: 22px;
-  background: rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+.button-cart:hover {
+  background-color: #007BCD;
+}
+
+controls {
+  margin-right: 1rem;
 }
 
 @media (min-width: 700px) {
+  controls {
+    margin-right: 4rem;
+  }
   .opaque-box-cart {
     width: 60%;
   }

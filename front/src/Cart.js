@@ -89,9 +89,7 @@ class Cart extends Component {
                 let idNumber = product.id
                 return (
                   <li className="product-item-cart" key={product.id}>
-                    <controls style={{
-                      marginRight: '5rem'
-                    }}>
+                    <controls>
                       <i className="fa fa-times" aria-hidden="true" style={{
                         color: 'red',
                         marginRight: '.5rem'
@@ -114,11 +112,9 @@ class Cart extends Component {
                 <span>${this.state.total}</span>
               </li>
             </ul>
-            <div className="button-class">
               <Link to='/checkout'>
                 <button className="button-cart">Checkout</button>
               </Link>
-            </div>
           </div>
         </div>
         <footr>

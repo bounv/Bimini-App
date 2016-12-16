@@ -69,7 +69,7 @@ export default class Product extends Component {
         <content style={{
           backgroundColor: '#369af8',
           display: 'block',
-          height: '85vh'
+          height: '90vh'
         }}>
         <div className="main-section" style={{
           display: 'flex',
