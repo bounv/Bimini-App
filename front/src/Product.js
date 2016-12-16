@@ -32,8 +32,12 @@ export default class Product extends Component {
 
   render() {
     let productsLoaded = false;
+    let productNotFound = false;
     if (this.state.products.length > 0) {
       productsLoaded = true;
+    }
+    if (this.props.params.productId > 2 || this.props.params.productId < 0) {
+      productNotFound = true;
     }
     return (
       <div style={{
@@ -76,12 +80,15 @@ export default class Product extends Component {
           flexDirection: 'column',
           alignItems: 'center'
         }}>
+            <div className='notFound' style={{marginTop: '5rem', textAlign: 'center', display: productNotFound ? 'block' : 'none'}}>
+              <h3 style={{display: productNotFound ? 'inline' : 'none'}}>Product not found</h3>
+            </div>
             <img style={{width:'5rem', marginTop:'2rem' }} src={productsLoaded ? this.state.products[this.props.params.productId].imageName : null} />
             <description style={{marginTop:'2rem', width: '15rem', color:'white', fontFamily:'Rosario'}}>{productsLoaded
                 ? this.state.products[this.props.params.productId].description
                 : null}
             </description>
-            <button style={{cursor: 'pointer', marginTop:'2rem', border: '2px solid white', backgroundColor:'white', borderRadius:'5px'}} onClick={this.addToCart.bind(this)}>Add to Cart</button>
+            <button style={{cursor: 'pointer', marginTop:'2rem', border: '2px solid white', backgroundColor:'white', borderRadius:'5px', display: productsLoaded ? 'inline-block' : 'none'}} onClick={this.addToCart.bind(this)}>Add to Cart</button>
           </div>
         </content>
       </div>
