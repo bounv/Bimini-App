@@ -11,24 +11,19 @@ a {
   color: #FFF;
 }
 
-.list-title a {
-  /*-webkit-text-stroke: .5px black;*/
-}
-
 .App-header {
   display: flex;
   flex-direction: column;
   height: 5rem;
   background-color: #007BCD;
+  justify-content: center;
 }
 
 .nav-titles {
-  /*outline: 2px solid red;*/
   display: flex;
   align-self: flex-start;
   position: absolute;
   margin: 0;
-  margin-top: 1rem;
   padding: 0;
   justify-content: flex-end;
   width: 100%;
@@ -40,10 +35,8 @@ a {
 .bimini-name {
   margin-left: .5rem;
   list-style: none;
-  margin-top: 1rem;
   font-family: 'Syncopate', sans-serif;
   color: white;
-  /*-webkit-text-stroke: 1px #2F80ED;*/
   font-size: 34px;
   position: absolute;
 }
@@ -63,12 +56,12 @@ a {
 }
 
 .mid-section {
-  /*outline: 2px solid red;*/
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   background-color: #369af8;
-  height: 35rem;
+  height: 90vh;
 }
 
 .slogan-main {
@@ -82,11 +75,6 @@ a {
   margin: 0;
   height: 3rem;
 }
-
-/*.image-container {
-  display: flex;
-  flex-direction: column;
-}*/
 
 .land-photo {
   position: relative;
@@ -102,85 +90,19 @@ a {
   background: rgba(32, 59, 64, 0.75);
   opacity: 1.00;
   border-radius: 20px;
-  height: 15rem;
-  margin-top: 5rem;
+  min-height: 15rem;
   width: 90%;
 }
 
 .landing-page-desc {
-  /*position: relative;*/
   color: #F2F2F2;
   font-family: "Rosario", sans-serif;
   line-height: 1.5rem;
   font-size: 22px;
-}
-
-@media (min-width:400px){
-
-  .nav-titles {
-    display: flex;
-    align-self: flex-start;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 18px;
-    font-family:"Rosario", sans-serif;
-    color: #F2F2F2;
-  }
-
-  .bimini-name {
-    list-style: none;
-    font-family: 'Syncopate', sans-serif;
-    /*color: #56CCF2;*/
-    -webkit-text-stroke: 1px #2F80ED;
-    font-size: 34px;
-  }
-
-  .list-title {
-    margin-right: 4rem;
-    list-style: none;
-    font-size: 22px;
-    margin-top: .5rem;
-  }
-
-  .landing-page-desc {
-    position: relative;
-    color: #F2F2F2;
-    font-family: "Rosario", sans-serif;
-    line-height: 1.5rem;
-    font-size: 26px;
-    line-height: 2rem;
-  }
-
-}
-@media (min-width:600px){
-
-  .Nav-photo {
-    height: 160px;
-  }
-
-  .bimini-name {
-    font-size: 42px;
-    margin-top: .5rem;
-  }
-
-  .list-title {
-    list-style: none;
-    font-size: 28px;
-    margin-top: 1rem;
-  }
-
-  .landing-page-desc {
-    font-size: 32px;
-  }
-  .opaque-box {
-    width: 70%;
-  }
+  padding: 2rem;
 }
 
 @media (min-width:1000px){
-
   .nav-titles {
     display: flex;
     justify-content: flex-end;
@@ -202,8 +124,6 @@ a {
   .bimini-name {
     list-style: none;
     font-family: 'Syncopate', sans-serif;
-    color: #56CCF2;
-    -webkit-text-stroke: 1px #2F80ED;
     font-size: 52px;
   }
 
@@ -227,25 +147,11 @@ a {
   }
 
   .opaque-box {
-    width: 50%;
+    width: 70%;
   }
 }
 
 @media (min-width:1040px){
-  /*.opaque-box {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    background: rgba(104, 164, 177, 0.75);
-    opacity: 1.00;
-    border-radius: 20px;
-    height: 20rem;
-    margin-top: 6rem;
-    margin-left: 33rem;
-    margin-right: 1.5rem;
-    width: 27rem;
-  }
-*/
   .landing-page-desc {
     font-size: 42px;
     line-height: 3rem;

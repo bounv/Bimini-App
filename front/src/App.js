@@ -4,10 +4,11 @@ import jpg from './HeaderNav.jpg';
 import './App.css';
 import pic from './LandingPage2.jpg';
 import axios from 'axios';
+import api from './Api';
 
 class App extends Component {
   componentDidMount (){
-    axios.get('http://localhost:3000/api/hello').then((response)=> {
+    axios.get(api() + '/api/hello').then((response)=> {
       console.log(response.data);
     })
   }
@@ -23,7 +24,7 @@ class App extends Component {
             <li className="list-title"><Link to={"/cart"}>Cart</Link></li>
           </ul>
         </div>
-        <h2 className="slogan-main">Water from the heavens</h2>
+        <h2 className="slogan-main">"Water from the Heavens"</h2>
         <div className="mid-section">
           {/* <img src={pic} className="land-photo" alt="image" /> */}
           <div className="opaque-box">

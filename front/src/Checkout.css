@@ -1,0 +1,30 @@
+.cart-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007BCD;
+  height: 97px;
+}
+
+div.center {
+  margin: 0 auto;
+}
+
+.middle-section {
+  background-color: #369af8;
+  height: 90vh;
+}
+
+.center-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-inputs {
+  margin-left: 1rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 3rem;
+  background-color: white;
+}

@@ -8,11 +8,12 @@ import bottleTwo from './bottleTwo.svg';
 import bottleTwoHover from './bottleTwoHover.svg';
 import bottleThree from './bottleThree.svg';
 import bottleThreeHover from './bottleThreeHover.svg';
+import api from './Api';
 const axios = require('axios');
 
 export default class MyComponent extends Component {
   componentDidMount() {
-    axios.get('http://localhost:3000/api/hello').then((response) => {
+    axios.get(api() + '/api/hello').then((response) => {
       console.log(response.data);
     })
   }
