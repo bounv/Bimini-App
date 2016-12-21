@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import './Cart.css';
 import cart from './CartPage.jpg';
 import axios from 'axios';
+import api from './Api';
 
 class Cart extends Component {
   constructor(props) {
@@ -19,10 +20,8 @@ class Cart extends Component {
   }
 
   getCart() {
-    axios.get('http://localhost:3000/api' +
-      '/get-cart').then((responseCart) => {
-      axios.get('http://localhost:3000/api' +
-        '/products').then((responseProducts) => {
+    axios.get(api() + '/api/get-cart').then((responseCart) => {
+      axios.get(api() + '/api/products').then((responseProducts) => {
         var cartItems = responseProducts.data.filter((v) => {
           return responseCart.data['' + v.id + ''] > 0;
         });
@@ -52,7 +51,7 @@ class Cart extends Component {
   onRemoveClick(idNumber, e) {
     e.preventDefault();
     console.log(idNumber);
-    axios.post('http://localhost:3000' +
+    axios.post(api() +
       '/api/remove-product?id=' + idNumber).then((response) => {
       // console.log(cart.id);
       this.getCart();
@@ -63,7 +62,7 @@ class Cart extends Component {
 
   onQuantityChange(idNumber, e) {
     e.preventDefault()
-    axios.post('http://localhost:3000' +
+    axios.post(api() +
       '/api/change-quantity?id=' + idNumber + '&newQuantity=' + e.target.value).then(() => {
       this.getCart();
     })

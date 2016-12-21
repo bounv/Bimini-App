@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Checkout.css';
 import { Link } from 'react-router';
 require('round10').polyfill();
+import api from './Api';
 
 export default class Checkout extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class Checkout extends Component {
   calculateTax(e) {
     e.preventDefault();
     console.log('asdasd')
-    axios.get('http://localhost:3000' + '/api/tax?zipCode=' + this.state.zip).then((response) => {
+    axios.get(api() + '/api/tax?zipCode=' + this.state.zip).then((response) => {
       this.setState({total: response.data.total, tax: response.data.totalRate, zipSubmitted: true})
     })
   }
